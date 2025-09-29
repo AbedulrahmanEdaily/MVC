@@ -1,0 +1,16 @@
+﻿<Doctype>
+    <html>
+    <head>
+
+    </head>
+    <body>
+        <h1>All Categories</h1>
+        @foreach (var user in @Model)
+        {
+            <h3>
+                Name : @user.Name <a href="/categories/details/@user.Id">Details</a>
+            </h3>
+        }
+    </body>
+</html>
+</Doctype>
