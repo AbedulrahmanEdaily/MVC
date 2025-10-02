@@ -1,0 +1,12 @@
+﻿@model Category
+
+
+<form method="post" action="/categories/Add">
+    <div>
+        <label for="CreateCategory">Add Category</label>
+        <input type="text" name="name" asp-for="Name" id="CreateCategory" placeholder="Enter Category Name"/>
+        <input type="text" name="description" asp-for="Description" id="CreateCategory" placeholder="Enter The Description" />
+        <button type="submit">Add</button>
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+</form>

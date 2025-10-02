@@ -1,0 +1,12 @@
+﻿@model Category
+
+
+<form method="post" action="/categories/update/@Model.Id">
+    <div>
+        <label for="CreateCategory">Update Category</label>
+        <input type="text" name="name" value="@Model.Name" placeholder="Enter Category Name" />
+        <input type="text" name="description" value="@Model.Description" id="CreateCategory" placeholder="Enter The Description" />
+        <button type="submit">Update</button>
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+</form>

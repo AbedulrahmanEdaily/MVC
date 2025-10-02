@@ -5,10 +5,11 @@
     </head>
     <body>
         <h1>All Categories</h1>
-        @foreach (var user in @Model)
+        <a href="/categories/createcategory">Add Category</a>
+        @foreach (var category in @Model)
         {
             <h3>
-                Name : @user.Name <a href="/categories/details/@user.Id">Details</a>
+                Id : @category.Id ......... Name : @category.Name ............. Description: @category.Description<a href="/categories/details/@category.Id">Details</a> <a href="/categories/delete/@category.Id">Delete</a> <a href="/categories/updateview/@category.Id">Update</a>
             </h3>
         }
     </body>

@@ -29,30 +29,18 @@ namespace WebApplication1.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Name")
+                    b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
                     b.HasKey("Id");
 
-                    b.ToTable("categories");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Name = "Tariq 1"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Name = "Tariq 2"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Name = "Tariq 3"
-                        });
+                    b.ToTable("Categories");
                 });
 #pragma warning restore 612, 618
         }
